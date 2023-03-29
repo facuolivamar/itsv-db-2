@@ -1,0 +1,9 @@
+Para la aprobación de este trabajo practico se deberá entregar:
+Archivo PDF con la consigna asignada.
+Diagrama de clases UML en formato png/jpeg que resuelva el caso de estudio planteado.
+Diagrama ER en formato png/jpeg para la construcción de la base de datos.
+Archivo .sql para la creacion de la base de datos (DDL) con INSERTS de ejemplo (5 por tabla).
+Queries asignadas para cada caso (serán entregadas a la brevedad).
+Para la entrega del trabajo TODOS los archivos deberán ser subidos a esta tarea por uno de los integrantes del grupo.
+
+Ademas los archivos deberán ser subidos a un repositorio GitHub, y deberán comentar el link al mismo en esta tarea.
