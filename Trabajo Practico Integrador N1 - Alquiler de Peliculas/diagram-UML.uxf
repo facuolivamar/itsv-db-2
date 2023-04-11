@@ -6,36 +6,40 @@
     <id>UMLClass</id>
     <coordinates>
       <x>128</x>
-      <y>144</y>
+      <y>96</y>
       <w>64</w>
-      <h>56</h>
+      <h>96</h>
     </coordinates>
     <panel_attributes>Tiendas
 --
 -id: auto
-+direccion</panel_attributes>
++nombre
++direccion
++telefono
++email</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>240</x>
-      <y>144</y>
+      <y>112</y>
       <w>168</w>
-      <h>56</h>
+      <h>80</h>
     </coordinates>
     <panel_attributes>Tiendas-Peliculas
 --
 -id: auto
-+copias
-</panel_attributes>
++id_tienda
++id_pelicula
++numeroCopias</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>184</x>
-      <y>160</y>
+      <y>152</y>
       <w>72</w>
       <h>32</h>
     </coordinates>
@@ -45,15 +49,22 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>480</x>
-      <y>144</y>
-      <w>64</w>
-      <h>56</h>
+      <x>440</x>
+      <y>136</y>
+      <w>104</w>
+      <h>128</h>
     </coordinates>
     <panel_attributes>Peliculas
 --
 -id: auto
-+precio
++titulo
++descripcion
++duracion
++precio_renta
++director
++genero
++clasificacion_edad
+
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -61,18 +72,18 @@
     <id>Relation</id>
     <coordinates>
       <x>400</x>
-      <y>160</y>
-      <w>96</w>
+      <y>152</y>
+      <w>56</w>
       <h>32</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;50.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>608</x>
-      <y>64</y>
+      <y>56</y>
       <w>64</w>
       <h>64</h>
     </coordinates>
@@ -80,7 +91,6 @@
 --
 -id: auto
 +nombre
-+apellido
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -88,15 +98,14 @@
     <id>UMLClass</id>
     <coordinates>
       <x>616</x>
-      <y>144</y>
+      <y>136</y>
       <w>80</w>
       <h>64</h>
     </coordinates>
     <panel_attributes>Genero
 --
 -id: auto
-+nombre
-+descripcion
++tipoGenero
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -104,14 +113,14 @@
     <id>UMLClass</id>
     <coordinates>
       <x>616</x>
-      <y>232</y>
-      <w>64</w>
+      <y>224</y>
+      <w>112</w>
       <h>56</h>
     </coordinates>
     <panel_attributes>Clasificacion
 --
 -id: auto
-+titulo
++tipoClasificacion
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -119,7 +128,7 @@
     <id>Relation</id>
     <coordinates>
       <x>536</x>
-      <y>184</y>
+      <y>176</y>
       <w>96</w>
       <h>96</h>
     </coordinates>
@@ -131,7 +140,7 @@
     <id>Relation</id>
     <coordinates>
       <x>536</x>
-      <y>96</y>
+      <y>88</y>
       <w>88</w>
       <h>80</h>
     </coordinates>
@@ -143,7 +152,7 @@
     <id>Relation</id>
     <coordinates>
       <x>536</x>
-      <y>160</y>
+      <y>152</y>
       <w>96</w>
       <h>32</h>
     </coordinates>
@@ -155,15 +164,16 @@
     <id>UMLClass</id>
     <coordinates>
       <x>240</x>
-      <y>264</y>
+      <y>256</y>
       <w>168</w>
-      <h>96</h>
+      <h>104</h>
     </coordinates>
-    <panel_attributes>Detalle
+    <panel_attributes>Detalles
 --
 -id: Long
-+copiasAlquiler
-+cargo
++id_alquiler
++id_tiendaPelicula
++copiasPelicula
 --
 /+restarCopias(i: int): int/
 /+calcularCargo(i: float): float/
@@ -175,7 +185,7 @@
     <id>Relation</id>
     <coordinates>
       <x>312</x>
-      <y>192</y>
+      <y>184</y>
       <w>24</w>
       <h>88</h>
     </coordinates>
@@ -186,7 +196,7 @@
     <id>Relation</id>
     <coordinates>
       <x>160</x>
-      <y>296</y>
+      <y>288</y>
       <w>96</w>
       <h>32</h>
     </coordinates>
@@ -197,16 +207,16 @@
     <id>UMLClass</id>
     <coordinates>
       <x>16</x>
-      <y>248</y>
+      <y>240</y>
       <w>152</w>
       <h>120</h>
     </coordinates>
     <panel_attributes>Alquiler
 --
 -id: auto
++id_cliente
 +fechaIncio
-+fechaDevolucion
-+cargo
++fecha_finalizacion
 +estadoDevolucion
 --
 /+calcularCargo(i: float): float/
@@ -217,17 +227,18 @@
     <id>UMLClass</id>
     <coordinates>
       <x>56</x>
-      <y>416</y>
+      <y>408</y>
       <w>72</w>
       <h>96</h>
     </coordinates>
     <panel_attributes>Cliente
 --
 -id: Long
-+correo
-+direccion
 +nombre
-+numero
++direccion
++telefono
++email
++tarjeta
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -235,7 +246,7 @@
     <id>Relation</id>
     <coordinates>
       <x>80</x>
-      <y>360</y>
+      <y>352</y>
       <w>24</w>
       <h>72</h>
     </coordinates>
@@ -246,7 +257,7 @@
     <id>Relation</id>
     <coordinates>
       <x>120</x>
-      <y>448</y>
+      <y>440</y>
       <w>96</w>
       <h>32</h>
     </coordinates>
@@ -257,15 +268,18 @@
     <id>UMLClass</id>
     <coordinates>
       <x>200</x>
-      <y>432</y>
+      <y>424</y>
       <w>64</w>
       <h>64</h>
     </coordinates>
     <panel_attributes>Tarjetas
 --
 -id: auto
-+codSeg
-+numero
++banco
++numeroTarjeta
++FechaExpiracion
++email
++tipoTarjeta
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -273,7 +287,7 @@
     <id>Relation</id>
     <coordinates>
       <x>256</x>
-      <y>448</y>
+      <y>440</y>
       <w>96</w>
       <h>32</h>
     </coordinates>
@@ -285,15 +299,14 @@
     <id>UMLClass</id>
     <coordinates>
       <x>336</x>
-      <y>432</y>
+      <y>424</y>
       <w>80</w>
       <h>64</h>
     </coordinates>
     <panel_attributes>TipoTarjeta
 --
 -id: auto
-+titulo
-+descripcion
++tipoTarjeta
 </panel_attributes>
     <additional_attributes/>
   </element>
