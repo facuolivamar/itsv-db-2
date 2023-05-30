@@ -69,7 +69,7 @@ FROM
 	film f2
 WHERE
 	f1.rating = f2.rating
-	AND f1.film_id <> f2.film_id
+	AND f1.film_id <> f2.film_id;
 
 -- 8 Get all the films that are available in store id 2 and the manager first/last name of this store (the manager will appear in all the rows).
 SELECT
