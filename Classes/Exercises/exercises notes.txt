@@ -1,0 +1,72 @@
+Class 02
+Exercises
+Create a new database called imdb
+Create tables: film (film_id, title, description, release_year); actor (actor_id, first_name, last_name) , film_actor (actor_id, film_id)
+Use autoincrement id
+Create PKs
+Alter table add column last_update to film and actor
+Alter table add foreign keys to film_actor table
+Insert some actors, films and who acted in each film
+
+Class 04
+Exercises
+Show title and special_features of films that are PG-13
+Get a list of all the different films duration.
+Show title, rental_rate and replacement_cost of films that have replacement_cost from 20.00 up to 24.00
+Show title, category and rating of films that have 'Behind the Scenes' as special_features
+Show first name and last name of actors that acted in 'ZOOLANDER FICTION'
+Show the address, city and country of the store with id 1
+Show pair of film titles and rating of films that have the same rating.
+Get all the films that are available in store id 2 and the manager first/last name of this store (the manager will appear in all the rows).
+
+Class 06
+Exercises
+List all the actors that share the last name. Show them in order
+Find actors that don't work in any film
+Find customers that rented only one film
+Find customers that rented more than one film
+List the actors that acted in 'BETRAYED REAR' or in 'CATCH AMISTAD'
+List the actors that acted in 'BETRAYED REAR' but not in 'CATCH AMISTAD'
+List the actors that acted in both 'BETRAYED REAR' and 'CATCH AMISTAD'
+List all the actors that didn't work in 'BETRAYED REAR' or 'CATCH AMISTAD'
+
+Class 07
+Exercises
+Find the films with less duration, show the title and rating.
+Write a query that returns the tiltle of the film which duration is the lowest. If there are more than one film with the lowest durtation, the query returns an empty resultset.
+Generate a report with list of customers showing the lowest payments done by each of them. Show customer information, the address and the lowest amount, provide both solution using ALL and/or ANY and MIN.
+Generate a report that shows the customer's information with the highest payment and the lowest payment in the same row.
+
+Class 09
+Exercises:
+Get the amount of cities per country in the database. Sort them by country, country_id.
+
+Get the amount of cities per country in the database. Show only the countries with more than 10 cities, order from the highest amount of cities to the lowest
+
+Generate a report with customer (first, last) name, address, total films rented and the total money spent renting films.
+
+Show the ones who spent more money first .
+Which film categories have the larger film duration (comparing average)?
+
+Order by average in descending order
+Show sales per film rating
+
+Class 11
+Exercises
+Find all the film titles that are not in the inventory.
+
+Find all the films that are in the inventory but were never rented.
+
+Show title and inventory_id.
+This exercise is complicated.
+hint: use sub-queries in FROM and in WHERE or use left join and ask if one of the fields is null
+Generate a report with:
+
+customer (first, last) name, store id, film title,
+when the film was rented and returned for each of these customers
+order by store_id, customer last_name
+Show sales per store (money of rented films)
+
+show store's city, country, manager info and total sales (money)
+(optional) Use concat to show city and country and manager first and last name
+Which actor has appeared in the most films?
